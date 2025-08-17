@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RealWin.ai Product & Data Analyst Proposal - Satyam Saurabh</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="25" cy="25" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="25" r="1.5" fill="rgba(255,255,255,0.08)"/><circle cx="50" cy="75" r="1" fill="rgba(255,255,255,0.06)"/></svg>');
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+        }
+
+        .section {
+            padding: 3rem 2rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .section:last-child {
+            border-bottom: none;
+        }
+
+        .section:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        .section h2 {
+            color: #2c3e50;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-left: 1rem;
+        }
+
+        .section h2::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 2px;
+        }
+
+        .section h3 {
+            color: #34495e;
+            font-size: 1.5rem;
+            margin: 1.5rem 0 1rem 0;
+        }
+
+        .section h4 {
+            color: #2c3e50;
+            font-size: 1.2rem;
+            margin: 1rem 0 0.5rem 0;
+        }
+
+        .section p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        ul {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+            text-align: justify;
+        }
+
+        .strength-weakness {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .strength,
+        .weakness {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .strength {
+            border-left: 4px solid #27ae60;
+        }
+
+        .weakness {
+            border-left: 4px solid #e74c3c;
+        }
+
+        .metrics-box {
+            background: linear-gradient(135deg, #f193fb37 0%, #f5577161 100%);
+            color: rgb(22, 22, 22);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 1rem 0;
+        }
+
+        .metrics-box h4 {
+            color: white;
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+
+        .tool-category {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            border-top: 3px solid #667eea;
+        }
+
+        .proof-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 1rem 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            border-left: 4px solid #3498db;
+        }
+
+        .highlight {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        .links {
+            display: flex;
+            gap: 1rem;
+            margin: 1rem 0;
+            flex-wrap: wrap;
+        }
+
+        .link-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+
+        .link-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .closing {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            text-align: center;
+            padding: 3rem 2rem;
+        }
+
+        .author-signature {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-top: 2rem;
+            font-style: italic;
+        }
+
+        @media (max-width: 768px) {
+            .strength-weakness {
+                grid-template-columns: 1fr;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .section {
+                padding: 2rem 1rem;
+            }
+
+            .links {
+                justify-content: center;
+            }
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header fade-in">
+            <h1>Proposal for the Product & Data Analyst Role</h1>
+            <div class="subtitle">By Satyam Saurabh</div>
+            <div class="subtitle">RealWin.ai</div>
+        </div>
+
+        <div class="section fade-in">
+            <h2>Executive Summary</h2>
+            <p>RealWin.ai stands at the intersection of data science and sports, a field where I have already
+                demonstrated significant, practical success. This document outlines why my proven experience and
+                expertise in building and deploying end-to-end sports prediction models makes me uniquely qualified to
+                not only meet but exceed your expectations. I will detail my specific strengths, a transparent view of
+                my growth areas, and a concrete plan for how I will deliver value from day one, backed by tangible proof
+                from my project portfolio.</p>
+        </div>
+
+        <div class="section fade-in">
+            <h2>Introduction: Who I Am</h2>
+            <ul>
+                <li>Aspiring Data Analyst and student of IIT Madras with hands-on projects in sports analytics,
+                    e-commerce prediction, machine learning and web applications.</li>
+                <li>Strong foundation in data cleaning, feature engineering, model building, and visualization.</li>
+                <li>Passionate about applying data-driven insights to sports, aligning perfectly with RealWin's vision.
+                </li>
+            </ul>
+        </div>
+
+        <div class="section fade-in">
+            <h2>My Strengths & Weaknesses</h2>
+            <div class="strength-weakness">
+                <div class="strength">
+                    <h3>Strengths</h3>
+                    <ul>
+                        <li><strong>Strong in data analysis:</strong> Can extract meaningful insights from messy
+                            datasets.</li>
+                        <li><strong>Experience in machine learning & predictive modelling:</strong> (Regression,
+                            Classification, XGBoost, Ensemble methods).</li>
+                        <li><strong>Visualization & storytelling:</strong> Can create clear dashboards/plots to explain
+                            match trends.</li>
+                        <li><strong>Adaptability:</strong> Comfortable in learning new tools & working in fast-paced
+                            environments.</li>
+                        <li><strong>Sports Domain Interest:</strong> Special focus on cricket & football analytics.</li>
+                    </ul>
+                </div>
+
+                <div class="weakness">
+                    <h3>Areas for Development</h3>
+                    <ul>
+                        <li><strong>Limited industry-level experience</strong> (so far, most work is project-based) →
+                            but I am eager to gain real-world exposure through RealWin.</li>
+                        <li><strong>Still building advanced deep learning expertise</strong> → however, I'm strong in ML
+                            fundamentals and can quickly upskill.</li>
+                        <li><strong>Not an expert in front-end development</strong> → but capable of handling basic web
+                            app deployment & dashboard integration.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section fade-in">
+            <h2>Why You Should Hire Me: A Direct Alignment with Your Needs</h2>
+            <p><strong>My value is not theoretical; it is based on projects I have already successfully
+                    completed.</strong></p>
+
+            <div class="proof-item">
+                <h4>Your Need: A developer who has shipped a relevant, end-to-end product.</h4>
+                <p><strong>My Proof:</strong> I single-handedly conceived, developed, and deployed a related T20 Cricket
+                    Score Prediction Model using Flask. This project is a functional web application that takes live
+                    match data and delivers real-time predictions. It proves I can manage a project from the initial
+                    idea and data collection to a successful launch.</p>
+                <p><strong>Evidence:</strong> <a href="https://cricket-score-predictor-0c9c.onrender.com/"
+                        target="_blank"
+                        style="display: inline; padding: 0.3rem 0.8rem; font-size: 0.9rem; color: #fff; background: linear-gradient(135deg, #cbd1ee 0%, #764ba2 100%); text-decoration: none; border-radius: 5px;">Live
+                        T20
+                        Cricket Score
+                        Predictor (click to try)</a></p>
+            </div>
+
+            <div class="proof-item">
+                <h4>Your Need: To improve prediction accuracy and expand your data pipelines.</h4>
+                <p><strong>My Proof:</strong> My model achieved high accuracy on validation data <span
+                        style="font-weight: bold;">(98% of predictions within ±2.6 runs)</span> by applying advanced
+                    feature
+                    engineering (e.g., creating advanced variables like 'last 5-over momentum', 'aggression_index',
+                    'collapse_indicator', 'scoring_potential' etc.).</p>
+                <p>I have hands-on experience with the complete data science workflow, from cleaning over 700,000 data
+                    points with Pandas to model training and validation with Scikit-learn. I can apply these similar
+                    techniques to help improve your existing models.</p>
+            </div>
+
+            <div class="proof-item">
+                <h4>Your Need: A versatile, entrepreneurial team member for a well visioned startup.</h4>
+                <p><strong>My Proof:</strong> Beyond the core ML model, I handled the entire stack for my project,
+                    including the backend logic, database, and UI. My internship experience in data analysis at Zenith
+                    India Corp. further proves my ability to translate raw data into business insights using tools like
+                    Power BI and SQL. I am not just a model builder; I am a full-stack problem solver ready to
+                    contribute wherever and I learn quickly on the job.</p>
+                <p>I can wear multiple hats — data analysis, model testing, product support, and quick learning of new
+                    tools. I see RealWin as a platform to grow with the company, not just a short-term job to try.</p>
+            </div>
+        </div>
+
+        <div class="section fade-in">
+            <h2>Tools & Technologies I Am Comfortable With</h2>
+            <div class="tools-grid">
+                <div class="tool-category">
+                    <h4>Data Science & ML</h4>
+                    <p>Python, Scikit-learn, Pandas, NumPy, Matplotlib, Seaborn, Jupyter, Google Colab</p>
+                    <p>Exposure to APIs & Web Scraping for data collection.</p>
+                </div>
+
+                <div class="tool-category">
+                    <h4>Web Dev & Databases</h4>
+                    <p>Flask, HTML, CSS, Bootstrap, SQL, SQLite, RDBMS</p>
+                </div>
+
+                <div class="tool-category">
+                    <h4>BI & Visualization</h4>
+                    <p>Power BI, MS Excel/Google Sheets</p>
+                </div>
+
+                <div class="tool-category">
+                    <h4>Development & Platforms</h4>
+                    <p>GitHub, Jupyter, VS Code, Kaggle, Google Colab, Render</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section fade-in">
+            <h2>What I Can Bring to RealWin</h2>
+            <ul>
+                <li>Build predictive models and data pipelines for cricket/football/sports analytics.</li>
+                <li>Extract actionable insights (venue effect, toss impact, player form) to strengthen predictions.</li>
+                <li>Support product development by structuring raw data into usable formats and ensuring smooth data
+                    flow.</li>
+                <li>Contribute to cross-team collaboration by translating data findings into business and product
+                    strategies.</li>
+            </ul>
+        </div>
+
+        <div class="section fade-in">
+            <h2>My Day-to-Day Work at RealWin (Proposed)</h2>
+            <p>If hired, I envision my daily contribution as:</p>
+            <ul>
+                <li><strong>Data Handling:</strong> Collect, clean, and organize sports match data from multiple
+                    sources.</li>
+                <li><strong>Analysis & Modeling:</strong> Run exploratory analysis and update prediction models with
+                    fresh data.</li>
+                <li><strong>Visualization & Reporting:</strong> Create clear dashboards/reports to track model accuracy
+                    and user engagement.</li>
+                <li><strong>Product Support:</strong> Monitor website analytics, fix minor issues, and test new
+                    features.</li>
+                <li><strong>Collaboration:</strong> Share insights with product and marketing teams, align weekly
+                    progress, and suggest improvements.</li>
+            </ul>
+        </div>
+
+        <div class="section fade-in">
+            <h2>Proof of Relevant Work</h2>
+
+            <div class="metrics-box">
+                <h3>Cricket Score Prediction (Detailed Metrics):</h3>
+                <ul>
+                    <li><strong>Dataset:</strong> Matches with ball-by-ball/over-by-over features (venue, innings
+                        momentum, run rate in last 5 overs, wickets in hand, opposition bowling strength).</li>
+                    <li><strong>Model:</strong> XGBoost regression; trained on past data with chronological split (to
+                        avoid leakage).</li>
+                    <li><strong>Validation Results:</strong>
+                        <ul>
+                            <li>Mean Absolute Error (MAE): 2.6 runs</li>
+                            <li>Root Mean Square Error (RMSE): 2.9</li>
+                            <li>% predictions within ±2.6 runs: 98%</li>
+                        </ul>
+                    </li>
+                    <li><strong>Deployment:</strong> Flask app with a simple UI for score predictions</li>
+                </ul>
+            </div>
+
+            <div class="metrics-box">
+                <h3>E-commerce Purchase Prediction (Detailed Metrics):</h3>
+                <ul>
+                    <li><strong>Dataset:</strong> ~1.2M+ e-commerce sessions with 50+ behavioural and categorical
+                        features (session duration, clicks, cart additions, device type, region, time of day).</li>
+                    <li><strong>Target:</strong> purchaseValue (continuous).</li>
+                    <li><strong>Model:</strong> Compared multiple regressors (Linear Regression, Ridge, Random Forest,
+                        KNN, Gradient Boosting, XGBoost). Final model chosen: XGBoost Regressor after feature selection.
+                    </li>
+                    <li><strong>Validation Results:</strong>
+                        <ul>
+                            <li>R² Score: 0.51 (baseline models) → improved to ~0.76 with feature engineering + XGBoost.
+                            </li>
+                            <li>Mean Absolute Error (MAE): ~155 INR</li>
+                            <li>Root Mean Square Error (RMSE): ~167 INR</li>
+                        </ul>
+                    </li>
+                    <li><strong>Deployment:</strong> Notebook-to-API pipeline prepared (Flask) with pre-processing
+                        steps; results visualized via Matplotlib/Seaborn for insight dashboards.</li>
+                </ul>
+            </div>
+
+            <div class="metrics-box">
+                <h3>Data Analysis Projects (Detailed Metrics):</h3>
+                <ul>
+                    <li><strong>Scope:</strong> Multiple small-to-mid scale projects using Pandas, NumPy, Matplotlib,
+                        and Seaborn to analyse structured datasets.</li>
+                    <li><strong>Examples of Datasets:</strong>
+                        <ul>
+                            <li>Online retail transactions (customer segmentation, repeat purchase patterns).</li>
+                            <li>Social media engagement (post reach vs. interaction trends).</li>
+                            <li>Movie rating datasets (genre-wise preferences, user bias).</li>
+                        </ul>
+                    </li>
+                    <li><strong>Key Outputs:</strong>
+                        <ul>
+                            <li>Identified top 5% customers driving ~40% of revenue in retail dataset.</li>
+                            <li>Found strong correlation (r ≈ 0.72) between engagement time and post reach in social
+                                media dataset.</li>
+                            <li>Built visualization dashboards (heatmaps, time series plots, trend lines) to summarize
+                                outcomes.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Tools:</strong> Python (Pandas, NumPy), Matplotlib, Seaborn, Jupyter Notebook.</li>
+                </ul>
+            </div>
+
+            <div class="links">
+                <a href="https://t.co/Vs8uHvb9o6" class="link-btn">View Resume</a>
+                <a href="https://i-satyamsaurabh.github.io/My-Portfolio" class="link-btn">View Portfolio</a>
+                <a href="https://github.com/i-satyamsaurabh" class="link-btn">View GitHub</a>
+                <a href="https://www.linkedin.com/in/satyam-saurabh" class="link-btn">View LinkedIn</a>
+            </div>
+        </div>
+
+        <div class="section fade-in">
+            <h2>Availability & Work Rhythm</h2>
+            <ul>
+                <li><strong>Commitment:</strong> 5 hours/day, Monday–Saturday.</li>
+                <li><strong>Communication:</strong> Daily updates via WhatsApp/Calls, weekly progress reports.</li>
+                <li><strong>Flexibility:</strong> Open to additional responsibilities as needed while keeping focus on
+                    data and analysis.</li>
+            </ul>
+        </div>
+
+        <div class="closing fade-in">
+            <h2>Closing Note</h2>
+            <p>I am genuinely excited about the opportunity to contribute to RealWin.ai at such an early stage.</p>
+            <p>This role will allow me to apply my skills in data and product analysis while growing alongside the
+                company.</p>
+            <p>With adaptability, strong analytical skills, and passion for sports-tech, I am confident of adding
+                measurable value from day one.</p>
+            <p>I look forward to being part of RealWin.ai's journey toward becoming a global leader in predictive sports
+                analytics.</p>
+            <div class="author-signature">– Satyam Saurabh</div>
+        </div>
+    </div>
+
+    <script>
+        // Add smooth fade-in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Initially hide all sections and observe them
+        document.querySelectorAll('.fade-in').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(30px)';
+            section.style.transition = 'opacity 0.8s ease-out, transform 0.8s ease-out';
+            observer.observe(section);
+        });
+
+        // Show first section immediately
+        document.querySelector('.fade-in').style.opacity = '1';
+        document.querySelector('.fade-in').style.transform = 'translateY(0)';
+    </script>
+</body>
+
+</html>
